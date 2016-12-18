@@ -15,3 +15,20 @@
   ;; (swap! app-state update-in [:__figwheel_counter] inc)
 )
 
+(defn clj->json
+  [ds]
+  (.stringify js/JSON (clj->js ds)))
+
+(def example-tiddler {:text "This is the text of the tiddler"
+                      :title "Tiddler Title"
+                      :tags "[[a tag]]"
+                      :type "text/vnd.tiddlywiki"
+                      :field "field value"})
+
+(defn- save-file
+  [filename content]
+  (let [lnk (js/document.getElementById "file-export-link")
+        blob (js/Blob. (js/Array. content) {:type "application/json"})]
+    (set! (.-href lnk) (.createObjectURL js/URL blob))
+    (set! (.-download lnk) filename)
+    (.click lnk)))
