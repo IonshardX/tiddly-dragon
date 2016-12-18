@@ -1,5 +1,6 @@
 (ns tiddly-dragon.core
-  (:require [tiddly-dragon.xml :as xml]))
+  (:require [tiddly-dragon.tiddler :as tiddler]
+            [tiddly-dragon.xml :as xml]))
 
 (defn on-js-reload []
   ;; optionally touch your app-state to force rerendering depending on
@@ -10,12 +11,6 @@
 (defn clj->json
   [ds]
   (.stringify js/JSON (clj->js ds)))
-
-(def example-tiddler {:text "This is the text of the tiddler"
-                      :title "Tiddler Title"
-                      :tags "[[a tag]]"
-                      :type "text/vnd.tiddlywiki"
-                      :field "field value"})
 
 (defn- save-file
   [filename content]
@@ -31,6 +26,7 @@
        .-target
        .-result
        xml/parse
+       (map tiddler/->tiddler)
        clj->json
        (save-file "TODO.json")))
 
