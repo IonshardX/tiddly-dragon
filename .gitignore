@@ -1,0 +1,6 @@
+/deploy
+.nrepl-port
+figwheel_server.log
+resources/
+js/compiled/out
+target/
