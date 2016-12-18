@@ -1,6 +1,6 @@
 (defproject tiddly-dragon "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "Tiddly Dragon is a simple webapp for converting DnDAppFiles XML into importable TiddlyWiki JSON files"
+  :url "https://kasuko.github.io/tiddly-dragon/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
