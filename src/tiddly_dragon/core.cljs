@@ -1,13 +1,5 @@
 (ns tiddly-dragon.core
-  (:require ))
-
-(enable-console-print!)
-
-(println "This text is printed from src/tiddly-dragon/core.cljs. Go ahead and edit it and see reloading in action.")
-
-;; define your app data so that it doesn't get over-written on reload
-
-(defonce app-state (atom {:text "Hello world!"}))
+  (:require [tiddly-dragon.xml :as xml]))
 
 (defn on-js-reload []
   ;; optionally touch your app-state to force rerendering depending on
@@ -32,3 +24,21 @@
     (set! (.-href lnk) (.createObjectURL js/URL blob))
     (set! (.-download lnk) filename)
     (.click lnk)))
+
+(defn convert-file
+  [e]
+  (->> e
+       .-target
+       .-result
+       xml/parse
+       clj->json
+       (save-file "TODO.json")))
+
+(defn import-file
+  [file-input]
+  (let [rdr (js/FileReader.)
+        first-file (aget (.-files file-input) 0)]
+    (set! (.-onload rdr) convert-file)
+    (.readAsText rdr first-file))
+  (set! (.-value file-input) "")
+  (js/console.log "File Imported"))

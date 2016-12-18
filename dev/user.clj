@@ -1,5 +1,6 @@
 (ns user
   (:require
+   [clojure.tools.namespace.repl :refer [refresh refresh-all]]
    [figwheel-sidecar.repl-api :as f]))
 
 ;; user is a namespace that the Clojure runtime looks for and
