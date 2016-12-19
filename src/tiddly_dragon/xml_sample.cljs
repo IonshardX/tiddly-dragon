@@ -226,3 +226,131 @@
 		</action>
 	</monster>
 </compendium>")
+
+
+(def magic-item-data
+  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!-- Updated 2015/12/21 (Errata) -->
+<compendium version=\"5\">
+  <item>
+    <name>Adamantine Chain Mail</name>
+    <type>HA</type>
+    <weight>55</weight>
+    <ac>16</ac>
+    <strength>13</strength>
+    <stealth>YES</stealth>
+    <rarity>Uncommon</rarity>
+    <text>Rarity: Uncommon</text>
+    <text>	This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 150</text>
+  </item>
+  <item>
+    <name>Adamantine Plate Armor</name>
+    <type>HA</type>
+    <weight>65</weight>
+    <ac>18</ac>
+    <strength>15</strength>
+    <stealth>YES</stealth>
+    <rarity>Uncommon</rarity>
+    <text>Rarity: Uncommon</text>
+    <text>	This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 150</text>
+  </item>
+  <item>
+    <name>Adamantine Ring Mail</name>
+    <type>HA</type>
+    <weight>40</weight>
+    <ac>14</ac>
+    <stealth>YES</stealth>
+    <rarity>Uncommon</rarity>
+    <text>Rarity: Uncommon</text>
+    <text>	This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 150</text>
+  </item>
+  <item>
+    <name>Adamantine Splint Armor</name>
+    <type>HA</type>
+    <weight>60</weight>
+    <ac>17</ac>
+    <strength>15</strength>
+    <stealth>YES</stealth>
+    <rarity>Uncommon</rarity>
+    <text>Rarity: Uncommon</text>
+    <text>	This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 150</text>
+  </item>
+  <item>
+    <name>Chain Mail of Acid Resistance</name>
+    <type>HA</type>
+    <weight>55</weight>
+    <ac>16</ac>
+    <strength>13</strength>
+    <stealth>YES</stealth>
+    <rarity>Rare</rarity>
+    <text>Rarity: Rare</text>
+    <text>Requires Attunement</text>
+    <text>	You have resistance to acid damage while you wear this armor.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 152</text>
+  </item>
+  <item>
+    <name>Chain Mail of Cold Resistance</name>
+    <type>HA</type>
+    <weight>55</weight>
+    <ac>16</ac>
+    <strength>13</strength>
+    <stealth>YES</stealth>
+    <rarity>Rare</rarity>
+    <text>Rarity: Rare</text>
+    <text>Requires Attunement</text>
+    <text>	You have resistance to cold damage while you wear this armor.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 152</text>
+  </item>
+  <item>
+    <name>Chain Mail of Fire Resistance</name>
+    <type>HA</type>
+    <weight>55</weight>
+    <ac>16</ac>
+    <strength>13</strength>
+    <stealth>YES</stealth>
+    <rarity>Rare</rarity>
+    <text>Rarity: Rare</text>
+    <text>Requires Attunement</text>
+    <text>	You have resistance to fire damage while you wear this armor.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 152</text>
+  </item>
+  <item>
+    <name>Chain Mail of Force Resistance</name>
+    <type>HA</type>
+    <weight>55</weight>
+    <ac>16</ac>
+    <strength>13</strength>
+    <stealth>YES</stealth>
+    <rarity>Rare</rarity>
+    <text>Rarity: Rare</text>
+    <text>Requires Attunement</text>
+    <text>	You have resistance to force damage while you wear this armor.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 152</text>
+  </item>
+  <item>
+    <name>Chain Mail of Lightning Resistance</name>
+    <type>HA</type>
+    <weight>55</weight>
+    <ac>16</ac>
+    <strength>13</strength>
+    <stealth>YES</stealth>
+    <rarity>Rare</rarity>
+    <text>Rarity: Rare</text>
+    <text>Requires Attunement</text>
+    <text>	You have resistance to lightning damage while you wear this armor.</text>
+    <text />
+    <text>Source: Dungeon Master's Guide, page 152</text>
+  </item>
+</compendium>")
