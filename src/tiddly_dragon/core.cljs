@@ -1,6 +1,7 @@
 (ns tiddly-dragon.core
   (:require [tiddly-dragon.tiddler :as tiddler]
-            [tiddly-dragon.xml :as xml]))
+            [tiddly-dragon.xml :as xml]
+            [clojure.string :as st]))
 
 (defn on-js-reload []
   ;; optionally touch your app-state to force rerendering depending on
@@ -21,20 +22,21 @@
     (.click lnk)))
 
 (defn convert-file
-  [e]
+  [filename e]
   (->> e
        .-target
        .-result
        xml/parse
        (map tiddler/->tiddler)
        clj->json
-       #_(save-file "TODO.json")))
+       (save-file (str filename ".json"))))
 
 (defn import-file
   [file-input]
   (let [rdr (js/FileReader.)
-        first-file (aget (.-files file-input) 0)]
-    (set! (.-onload rdr) convert-file)
+        first-file (aget (.-files file-input) 0)
+        filename (-> first-file .-name (st/split ".") first)]
+    (set! (.-onload rdr) (partial convert-file filename))
     (.readAsText rdr first-file))
   (set! (.-value file-input) "")
   (js/console.log "File Imported"))
