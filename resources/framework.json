@@ -1,0 +1,28 @@
+[
+    {
+        "created": "20161221191706195",
+        "text": ".spell dt:before {\n  content: \"\";\n  display: block;\n}\n.spell dt, dd {\n  display: inline;\n}\n.spell dd {\n  margin-left: 5px;\n}",
+        "title": "$:/D&D/styles/Spell",
+        "tags": "$:/tags/Stylesheet",
+        "modified": "20161221192640797",
+        "type": "text/css"
+    },
+    {
+        "created": "20161221192809427",
+        "modified": "20161221192851106",
+        "text": "<$list filter=\"[is[current]tag[Spell]]\">\n@@.spell\n<h6>Classes: {{!!classes}}</h6>\n@@\n</$list>",
+        "title": "$:/D&D/templates/footer/Spell",
+        "tags": "$:/tags/ViewTemplate",
+        "type": "text/vnd.tiddlywiki",
+        "list-after": "$:/core/ui/ViewTemplate/body"
+    },
+    {
+        "created": "20161221182524401",
+        "text": "<$list filter=\"[is[current]tag[Spell]]\">\n@@.spell\n<h3>\n<$reveal type=\"nomatch\" state=\"!!level\" text=\"0\">Level {{!!level}}, </$reveal>\n{{!!school}}\n<$reveal type=\"match\" state=\"!!level\" text=\"0\"> cantrip</$reveal>\n</h3>\n<dl>\n<dt>Casting Time:</dt>\n<dd>{{!!time}}</dd>\n\n<dt>Range:</dt><dd>{{!!range}}</dd>\n<dt>Components:</dt>\n<dd>{{!!components}}</dd>\n<dt>Duration:</dt>\n<dd>{{!!duration}}</dd>\n</dl>\n@@\n</$list>",
+        "title": "$:/D&D/templates/header/Spell",
+        "tags": "$:/tags/ViewTemplate",
+        "modified": "20161221193428311",
+        "type": "text/vnd.tiddlywiki",
+        "list-before": "$:/core/ui/ViewTemplate/body"
+    }
+]
