@@ -4,3 +4,4 @@ figwheel_server.log
 resources/
 js/compiled/out
 target/
+.DS_Store
