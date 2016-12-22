@@ -1,20 +1,42 @@
 [
     {
-        "created": "20161221192809427",
-        "modified": "20161221192851106",
-        "text": "<$list filter=\"[is[current]tag[Spell]]\">\n@@.spell\n<h6>Classes: {{!!classes}}</h6>\n@@\n</$list>",
-        "title": "$:/D&D/templates/footer/Spell",
+        "created": "20161222184810299",
+        "modified": "20161222192458259",
+        "title": "$:/TiddlyDragon/templates/Monster",
+        "text": "<$list filter=\"[is[current]tag[Monster]]\">\n@@.monster\n<h3>{{!!size}} {{!!_type}}, {{!!alignment}}\n<span style=\"float:right;\">\n<strong>CR:</strong> {{!!cr}}\n(<$view tiddler=\"$:/TiddlyDragon/data/CR Experience\" index={{!!cr}} /> xp)\n</span>\n</h3>\n\n<div>\n<span style=\"padding-right: 2em;\"><strong>AC: </strong> {{!!ac}}</span>\n<span style=\"padding-right: 2em;\"><strong>HP:</strong> {{!!hp}}</span>\n<span><strong>Speed:</strong> {{!!speed}}</span>\n</div>\n\n{{||$:/TiddlyDragon/templates/Stat Block}}\n\n<dl>\n<$reveal type=\"nomatch\" state=\"!!save\" text=\"\">\n<dt>Saving Throws</dt>\n<dd>{{!!save}}</dd>\n</$reveal>\n\n<$reveal type=\"nomatch\" state=\"!!skill\" text=\"\">\n<dt>Skills</dt>\n<dd>{{!!skill}}</dd>\n</$reveal>\n\n<$reveal type=\"nomatch\" state=\"!!resist\" text=\"\">\n<dt>Damage Resistances</dt>\n<dd>{{!!resist}}</dd>\n</$reveal>\n\n<$reveal type=\"nomatch\" state=\"!!immune\" text=\"\">\n<dt>Damage Immunities</dt>\n<dd>{{!!immune}}</dd>\n</$reveal>\n\n<$reveal type=\"nomatch\" state=\"!!conditionImmune\" text=\"\">\n<dt>Condition Immunities</dt>\n<dd>{{!!conditionImmune}}</dd>\n</$reveal>\n\n<$reveal type=\"nomatch\" state=\"!!senses\" text=\"\">\n<dt>Senses</dt>\n<dd>{{!!senses}}</dd>\n</$reveal>\n\n<$reveal type=\"nomatch\" state=\"!!languages\" text=\"\">\n<dt>Languages</dt>\n<dd>{{!!languages}}</dd>\n</$reveal>\n</dl>\n@@\n</$list>",
         "tags": "$:/tags/ViewTemplate",
-        "type": "text/vnd.tiddlywiki",
-        "list-after": "$:/core/ui/ViewTemplate/body"
+        "list-before": "$:/core/ui/ViewTemplate/body"
+    },
+    {
+        "created": "20161222183444419",
+        "modified": "20161222192201779",
+        "title": "$:/TiddlyDragon/templates/Stat Block",
+        "text": "@@.stat-block\n<table>\n<tr>\n<th>Str</th>\n<th>Dex</th>\n<th>Con</th>\n<th>Int</th>\n<th>Wis</th>\n<th>Cha</th>\n</tr>\n<tr>\n<td>\n{{!!str}}\n(<$view tiddler=\"$:/TiddlyDragon/data/Ability Modifier\" index={{!!str}} />)\n</td>\n<td>\n{{!!dex}}\n(<$view tiddler=\"$:/TiddlyDragon/data/Ability Modifier\" index={{!!dex}} />)\n</td>\n<td>\n{{!!con}}\n(<$view tiddler=\"$:/TiddlyDragon/data/Ability Modifier\" index={{!!con}} />)\n</td>\n<td>\n{{!!int}}\n(<$view tiddler=\"$:/TiddlyDragon/data/Ability Modifier\" index={{!!int}} />)\n</td>\n<td>\n{{!!wis}}\n(<$view tiddler=\"$:/TiddlyDragon/data/Ability Modifier\" index={{!!wis}} />)\n</td>\n<td>\n{{!!cha}}\n(<$view tiddler=\"$:/TiddlyDragon/data/Ability Modifier\" index={{!!cha}} />)\n</td>\n</tr>\n</table>\n@@",
+        "tags": ""
     },
     {
         "created": "20161221182524401",
-        "text": "<$list filter=\"[is[current]tag[Spell]]\">\n@@.spell\n<h3>\n<$reveal type=\"nomatch\" state=\"!!level\" text=\"0\">Level {{!!level}}, </$reveal>\n{{!!school}}\n<$reveal type=\"match\" state=\"!!level\" text=\"0\"> cantrip</$reveal>\n<$reveal type=\"match\" state=\"!!ritual\" text=\"YES\">(ritual)</$reveal>\n</h3>\n<strong>Casting Time:</strong> {{!!time}}<br />\n<strong>Range:</strong> {{!!range}}<br />\n<strong>Components:</strong> {{!!components}}<br />\n<strong>Duration:</strong> {{!!duration}}<br />\n@@\n</$list>",
-        "title": "$:/D&D/templates/header/Spell",
+        "text": "<$list filter=\"[is[current]tag[Spell]]\">\n@@.spell\n<h3>\n<$reveal type=\"nomatch\" state=\"!!level\" text=\"0\">Level {{!!level}}, </$reveal>\n{{!!school}}\n<$reveal type=\"match\" state=\"!!level\" text=\"0\"> cantrip</$reveal>\n<$reveal type=\"match\" state=\"!!ritual\" text=\"YES\">(ritual)</$reveal>\n<span style=\"float:right;\">Classes: {{!!classes}}</span>\n</h3>\n<strong>Casting Time:</strong> {{!!time}}<br />\n<strong>Range:</strong> {{!!range}}<br />\n<strong>Components:</strong> {{!!components}}<br />\n<strong>Duration:</strong> {{!!duration}}<br />\n@@\n</$list>",
+        "title": "$:/TiddlyDragon/templates/Spell",
         "tags": "$:/tags/ViewTemplate",
-        "modified": "20161222035518397",
+        "modified": "20161222191059426",
         "type": "text/vnd.tiddlywiki",
         "list-before": "$:/core/ui/ViewTemplate/body"
+    },
+    {
+        "created": "20161222191604421",
+        "text": "1:-5\n2:-4\n3:-4\n4:-3\n5:-3\n6:-2\n7:-2\n8:-1\n9:-1\n10:+0\n11:+0\n12:+1\n13:+1\n14:+2\n15:+2\n16:+3\n17:+3\n18:+4\n19:+4\n20:+5\n21:+5\n22:+6\n23:+6\n24:+7\n25:+7\n26:+8\n27:+8\n28:+9\n29:+9\n30:+10",
+        "title": "$:/TiddlyDragon/data/Ability Modifier",
+        "tags": "",
+        "modified": "20161222192015388",
+        "type": "application/x-tiddler-dictionary"
+    },
+    {
+        "created": "20161222185101706",
+        "text": "0:0 or 10\n1/8:25\n1/4:50\n1/2:100\n1:200\n2:450\n3:700\n4:1,100\n5:1,800\n6:2,300\n7:2,900\n8:3,900\n9:5,000\n10:5,900\n11:7,200\n12:8,400\n13:10,000\n14:11,500\n15:13,000\n16:15,000\n17:18,000\n18:20,000\n19:22,000\n20:25,000\n21:33,000\n22:41,000\n23:50,000\n24:62,000\n25:75,000\n26:90,000\n27:150,000\n28:120,000\n29:135,000\n30:155,000",
+        "title": "$:/TiddlyDragon/data/CR Experience",
+        "tags": "",
+        "modified": "20161222192524443",
+        "type": "application/x-tiddler-dictionary"
     }
 ]
