@@ -17,8 +17,6 @@
   [entity]
   (:name entity))
 
-(defmulti ->tags :tag)
-
 (defn kw->tag
   [kw]
   (-> kw
@@ -29,9 +27,24 @@
   [tag]
   (str "[[" tag "]]"))
 
+(defn base-tag
+  [entity]
+  (-> entity :tag kw->tag))
+
+(defn stringify-tabs
+  [tags]
+  (->> tags
+       flatten
+       set
+       (map st/trim)
+       (map tagify)
+       (st/join " ")))
+
+(defmulti ->tags :tag)
+
 (defmethod ->tags :default
   [entity]
-  [(-> entity :tag kw->tag tagify)])
+  (base-tag entity))
 
 (defmulti ->text :tag)
 
@@ -44,6 +57,6 @@
   (-> entity
       prepare
       (assoc :title (->title entity)
-             :tags (->tags entity)
+             :tags (stringify-tabs (->tags entity))
              :text (->text entity)
              :type "text/vnd.tiddlywiki")))
