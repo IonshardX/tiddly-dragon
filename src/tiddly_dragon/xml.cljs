@@ -77,7 +77,7 @@
   (reset! xml-data xml)
   (get-data xml))
 
-(def tag-parsers {:spell [:name :level :school :time :range :components :duration :classes [:text join-text] [:roll (partial join-text ", ")]]
+(def tag-parsers {:spell [:name :level :ritual :school :time :range :components :duration :classes [:text join-text] [:roll (partial join-text ", ")]]
                   :monster [:name :size :type :alignment :ac :hp :speed
                             :str :dex :con :int :wis :cha
                             :save :skill
