@@ -1,4 +1,5 @@
 (ns tiddly-dragon.core
+  (:require-macros [tiddly-dragon.template :refer [deft]])
   (:require [tiddly-dragon.tiddler :as tiddler]
             [tiddly-dragon.xml :as xml]
             [clojure.string :as st]))
@@ -8,6 +9,8 @@
   ;; your application
   ;; (swap! app-state update-in [:__figwheel_counter] inc)
 )
+
+(deft framework "framework.json")
 
 (defn clj->json
   [ds]

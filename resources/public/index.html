@@ -12,6 +12,8 @@
       <h2>XML File Select</h2>
       <input type="file" id="files" name="files[]" onchange="tiddly_dragon.core.import_file(this)"/>
       <a id="file-export-link"></a>
+      <h2>Framework Download</h2>
+      <button type="button" onclick="tiddly_dragon.core.save_file('framework.json', tiddly_dragon.core.framework)">Download Framework</button>
     </div>
     <script src="js/compiled/tiddly_dragon.js" type="text/javascript"></script>
   </body>
