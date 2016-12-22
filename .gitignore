@@ -12,6 +12,5 @@ pom.xml
 .repl
 .nrepl-port
 /resources/empty.html
-/resources/.DS_Store
 /deploy
-/src/tiddly_dragon/.DS_Store
+.DS_Store

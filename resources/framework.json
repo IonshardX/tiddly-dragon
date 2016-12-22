@@ -10,10 +10,10 @@
     },
     {
         "created": "20161221182524401",
-        "text": "<$list filter=\"[is[current]tag[Spell]]\">\n@@.spell\n<h3>\n<$reveal type=\"nomatch\" state=\"!!level\" text=\"0\">Level {{!!level}}, </$reveal>\n{{!!school}}\n<$reveal type=\"match\" state=\"!!level\" text=\"0\"> cantrip</$reveal>\n<$reveal type=\"match\" state=\"!!ritual\" text=\"YES\">(ritual)</$reveal>\n</h3>\n<strong>Casting Time:</strong> {{!!time}}<br />\n<strong>Range:</strong> {{!!range}}<br />\n<strong>Components:</strong> {{!!components}}<br />\n<strong>Duration:</strong> {{!!duration}}</br>\n@@\n</$list>",
+        "text": "<$list filter=\"[is[current]tag[Spell]]\">\n@@.spell\n<h3>\n<$reveal type=\"nomatch\" state=\"!!level\" text=\"0\">Level {{!!level}}, </$reveal>\n{{!!school}}\n<$reveal type=\"match\" state=\"!!level\" text=\"0\"> cantrip</$reveal>\n<$reveal type=\"match\" state=\"!!ritual\" text=\"YES\">(ritual)</$reveal>\n</h3>\n<strong>Casting Time:</strong> {{!!time}}<br />\n<strong>Range:</strong> {{!!range}}<br />\n<strong>Components:</strong> {{!!components}}<br />\n<strong>Duration:</strong> {{!!duration}}<br />\n@@\n</$list>",
         "title": "$:/D&D/templates/header/Spell",
         "tags": "$:/tags/ViewTemplate",
-        "modified": "20161222035057622",
+        "modified": "20161222035518397",
         "type": "text/vnd.tiddlywiki",
         "list-before": "$:/core/ui/ViewTemplate/body"
     }
