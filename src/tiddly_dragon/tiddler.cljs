@@ -1,19 +1,49 @@
 (ns tiddly-dragon.tiddler
-  (:require [clojure.set :as set]))
+  (:require [clojure.string :as st]))
 
-(def example-tiddler {:text "This is the text of the tiddler"
-                      :title "Tiddler Title"
-                      :tags "[[a tag]]"
-                      :type "text/vnd.tiddlywiki"
-                      :field "field value"})
+(defn title-case
+  [s]
+  (st/join " " (map st/capitalize (st/split s #"[ -_]"))))
 
-(defn name->title
+(defmulti prepare :tag)
+
+(defmethod prepare :default
   [entity]
-  (set/rename-keys entity {:name :title}))
+  entity)
 
-(defmulti ->tiddler :tag)
+(defmulti ->title :tag)
 
-(defmethod ->tiddler :default
+(defmethod ->title :default
   [entity]
-  (->> entity
-       name->title))
+  (:name entity))
+
+(defmulti ->tags :tag)
+
+(defn kw->tag
+  [kw]
+  (-> kw
+      name
+      title-case))
+
+(defn tagify
+  [tag]
+  (str "[[" tag "]]"))
+
+(defmethod ->tags :default
+  [entity]
+  [(-> entity :tag kw->tag tagify)])
+
+(defmulti ->text :tag)
+
+(defmethod ->text :default
+  [entity]
+  (:text entity))
+
+(defn ->tiddler
+  [entity]
+  (-> entity
+      prepare
+      (assoc :title (->title entity)
+             :tags (->tags entity)
+             :text (->text entity)
+             :type "text/vnd.tiddlywiki")))

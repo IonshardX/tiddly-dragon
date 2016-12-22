@@ -45,12 +45,17 @@
       (assoc m tag value)
       m)))
 
+(defn add-tag
+  [tag xml]
+  (assoc xml :tag tag))
+
 (defn ->map
   [xml]
   (->> xml
        :tag
        (get tag-parsers)
-       (reduce (partial parse-tag xml) {})))
+       (reduce (partial parse-tag xml) {})
+       (add-tag (:tag xml))))
 
 (defn subtag
   [tag xml]
