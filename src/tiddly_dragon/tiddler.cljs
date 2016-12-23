@@ -8,8 +8,10 @@
 (defmulti prepare :tag)
 
 (defmethod prepare :default
-  [entity]
-  entity)
+  [{:keys [type] :as entity}]
+  (if type
+    (assoc entity :_type (:type entity))
+    entity))
 
 (defmulti ->title :tag)
 
@@ -44,7 +46,7 @@
 
 (defmethod ->tags :default
   [entity]
-  (base-tag entity))
+  [(base-tag entity)])
 
 (defmulti ->text :tag)
 
@@ -53,10 +55,10 @@
   (:text entity))
 
 (defn ->tiddler
-  [entity]
-  (-> entity
-      prepare
-      (assoc :title (->title entity)
-             :tags (stringify-tabs (->tags entity))
-             :text (->text entity)
-             :type "text/vnd.tiddlywiki")))
+  [xml]
+  (let [entity (prepare xml)]
+    (assoc entity
+           :title (->title entity)
+           :tags (stringify-tabs (->tags entity))
+           :text (->text entity)
+           :type "text/vnd.tiddlywiki")))

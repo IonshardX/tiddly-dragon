@@ -19,4 +19,5 @@
   [entity]
   [(tiddler/base-tag entity)
    (st/split (:classes entity) #", ")
-   (str "Level " (:level entity))])
+   (str "Level " (:level entity))
+   (:school entity)])
