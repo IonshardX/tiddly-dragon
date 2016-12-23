@@ -37,6 +37,7 @@
   [tags]
   (->> tags
        flatten
+       (remove nil?)
        set
        (map st/trim)
        (map tagify)
