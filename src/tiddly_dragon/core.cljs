@@ -1,6 +1,7 @@
 (ns tiddly-dragon.core
   (:require-macros [tiddly-dragon.template :refer [deft]])
   (:require [tiddly-dragon.tiddler :as tiddler]
+            [tiddly-dragon.tags.monster]
             [tiddly-dragon.tags.spell]
             [tiddly-dragon.xml :as xml]
             [clojure.string :as st]))
