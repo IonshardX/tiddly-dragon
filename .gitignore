@@ -6,3 +6,4 @@ js/compiled/out
 target/
 .DS_Store
 output
+plugins
