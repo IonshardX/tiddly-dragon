@@ -1,5 +1,5 @@
-(ns tiddly-dragon.tags.monster
-  (:require [tiddly-dragon.tiddler :as tiddler]
+(ns tiddly-dragon-import.tags.monster
+  (:require [tiddly-dragon-import.tiddler :as tiddler]
             [clojure.string :as st]))
 
 (def headers {:action "Actions"

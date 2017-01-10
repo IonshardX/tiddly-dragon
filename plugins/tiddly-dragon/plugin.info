@@ -1,0 +1,10 @@
+{
+    "title": "$:/plugins/ionshard/tiddly-dragon",
+    "description": "D&D Tools for TiddlyWiki",
+    "author": "Victor Ling",
+    "version": "0.0.1",
+    "core-version": ">=5.0.8",
+    "source": "https://github.com/ionshard/tiddly-dragon",
+    "plugin-type": "plugin",
+    "list": "readme"
+}

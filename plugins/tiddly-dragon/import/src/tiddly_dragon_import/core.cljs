@@ -1,10 +1,9 @@
-(ns tiddly-dragon.core
-  (:require-macros [tiddly-dragon.template :refer [deft]])
-  (:require [tiddly-dragon.tiddler :as tiddler]
-            [tiddly-dragon.tags.item]
-            [tiddly-dragon.tags.monster]
-            [tiddly-dragon.tags.spell]
-            [tiddly-dragon.xml :as xml]
+(ns tiddly-dragon-import.core
+  (:require [tiddly-dragon-import.tiddler :as tiddler]
+            [tiddly-dragon-import.tags.item]
+            [tiddly-dragon-import.tags.monster]
+            [tiddly-dragon-import.tags.spell]
+            [tiddly-dragon-import.xml :as xml]
             [clojure.string :as st]))
 
 (defn on-js-reload []
@@ -13,11 +12,9 @@
   ;; (swap! app-state update-in [:__figwheel_counter] inc)
 )
 
-(deft framework "framework.json")
-
-(defn clj->json
+(defn js->json
   [ds]
-  (.stringify js/JSON (clj->js ds)))
+  (.stringify js/JSON ds))
 
 (defn- save-file
   [filename content]
@@ -32,10 +29,17 @@
   (->> e
        .-target
        .-result
+       convert-xml
+       js->json
+       (save-file (str filename ".json"))))
+
+(defn convert-xml
+  [xml]
+  (->> xml
        xml/parse
        (map tiddler/->tiddler)
-       clj->json
-       (save-file (str filename ".json"))))
+       clj->js))
+
 
 (defn import-file
   [file-input]

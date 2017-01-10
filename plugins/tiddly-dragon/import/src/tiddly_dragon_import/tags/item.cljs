@@ -1,5 +1,5 @@
-(ns tiddly-dragon.tags.item
-  (:require [tiddly-dragon.tiddler :as tiddler]))
+(ns tiddly-dragon-import.tags.item
+  (:require [tiddly-dragon-import.tiddler :as tiddler]))
 
 (def type-map {"A" "Arrow"
                "G" "Grimoire"

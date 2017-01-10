@@ -1,0 +1,20 @@
+title: $:/plugins/ionshard/tiddly-dragon/templates/Spell
+type: text/vnd.tiddlywiki
+tags: $:/tags/ViewTemplate
+list-before: $:/core/ui/ViewTemplate/body
+
+<$list filter="[is[current]tag[Spell]]">
+@@.spell
+<h3>
+<$reveal type="nomatch" state="!!level" text="0">Level {{!!level}}, </$reveal>
+{{!!school}}
+<$reveal type="match" state="!!level" text="0"> cantrip</$reveal>
+<$reveal type="match" state="!!ritual" text="YES">(ritual)</$reveal>
+<span style="float:right;">Classes: {{!!classes}}</span>
+</h3>
+<strong>Casting Time:</strong> {{!!time}}<br />
+<strong>Range:</strong> {{!!range}}<br />
+<strong>Components:</strong> {{!!components}}<br />
+<strong>Duration:</strong> {{!!duration}}<br />
+@@
+</$list>

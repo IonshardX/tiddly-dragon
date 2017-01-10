@@ -1,0 +1,6 @@
+/*\
+title: $:/plugins/ionshard/tiddly-dragon/import.js
+type: application/javascript
+module-type: library
+\*/
+(function(definition){if(typeof exports==="object"){module.exports=definition();}else if(typeof define==="function"&&define.amd){define(definition);}else{tiddly_dragon_import=definition();}})(function(){return function(){

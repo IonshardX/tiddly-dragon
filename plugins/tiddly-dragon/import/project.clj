@@ -1,6 +1,6 @@
-(defproject tiddly-dragon "0.1.0-SNAPSHOT"
+(defproject tiddly-dragon-import "0.1.0-SNAPSHOT"
   :description "Tiddly Dragon is a simple webapp for converting DnDAppFiles XML into importable TiddlyWiki JSON files"
-  :url "https://kasuko.github.io/tiddly-dragon/"
+  :url "https://ionshard.github.io/tiddly-dragon/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -26,16 +26,16 @@
                 ;; the presence of a :figwheel configuration here
                 ;; will cause figwheel to inject the figwheel client
                 ;; into your build
-                :figwheel {:on-jsload "tiddly-dragon.core/on-js-reload"
+                :figwheel {:on-jsload "tiddly-dragon-import.core/on-js-reload"
                            ;; :open-urls will pop open your application
                            ;; in the default browser once Figwheel has
                            ;; started and complied your application.
                            ;; Comment this out once it no longer serves you.
                            :open-urls ["http://localhost:3449/index.html"]}
 
-                :compiler {:main tiddly-dragon.core
+                :compiler {:main tiddly-dragon-import.core
                            :asset-path "js/compiled/out"
-                           :output-to "resources/public/js/compiled/tiddly_dragon.js"
+                           :output-to "resources/public/js/compiled/tiddly_dragon_import.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true
                            ;; To console.log CLJS data-structures make sure you enable devtools in Chrome
@@ -46,8 +46,8 @@
                ;; lein cljsbuild once min
                {:id "min"
                 :source-paths ["src"]
-                :compiler {:output-to "resources/public/js/compiled/tiddly_dragon.js"
-                           :main tiddly-dragon.core
+                :compiler {:output-to "resources/public/js/compiled/tiddly_dragon_import.js"
+                           :main tiddly-dragon-import.core
                            :optimizations :simple
                            :pretty-print false}}]}
 

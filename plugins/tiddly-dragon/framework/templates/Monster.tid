@@ -1,0 +1,60 @@
+title: $:/plugins/ionshard/tiddly-dragon/templates/Monster
+type: text/vnd.tiddlywiki
+tags: $:/tags/ViewTemplate
+list-before: $:/core/ui/ViewTemplate/body
+
+<$list filter="[is[current]tag[Monster]]">
+@@.monster
+<h3>{{!!size}} {{!!_type}}, {{!!alignment}}
+<span style="float:right;">
+<strong>CR:</strong> {{!!cr}}
+(<$view tiddler="$:/plugins/ionshard/tiddly-dragon/data/CR Experience" index={{!!cr}} /> xp)
+</span>
+</h3>
+
+<div>
+<span style="padding-right: 2em;"><strong>AC: </strong> {{!!ac}}</span>
+<span style="padding-right: 2em;"><strong>HP:</strong> {{!!hp}}</span>
+<span><strong>Speed:</strong> {{!!speed}}</span>
+</div>
+
+{{||$:/plugins/ionshard/tiddly-dragon/templates/Stat Block}}
+
+<dl>
+<$reveal type="nomatch" state="!!save" text="">
+<dt>Saving Throws</dt>
+<dd>{{!!save}}</dd>
+</$reveal>
+
+<$reveal type="nomatch" state="!!skill" text="">
+<dt>Skills</dt>
+<dd>{{!!skill}}</dd>
+</$reveal>
+
+<$reveal type="nomatch" state="!!resist" text="">
+<dt>Damage Resistances</dt>
+<dd>{{!!resist}}</dd>
+</$reveal>
+
+<$reveal type="nomatch" state="!!immune" text="">
+<dt>Damage Immunities</dt>
+<dd>{{!!immune}}</dd>
+</$reveal>
+
+<$reveal type="nomatch" state="!!conditionImmune" text="">
+<dt>Condition Immunities</dt>
+<dd>{{!!conditionImmune}}</dd>
+</$reveal>
+
+<$reveal type="nomatch" state="!!senses" text="">
+<dt>Senses</dt>
+<dd>{{!!senses}}</dd>
+</$reveal>
+
+<$reveal type="nomatch" state="!!languages" text="">
+<dt>Languages</dt>
+<dd>{{!!languages}}</dd>
+</$reveal>
+</dl>
+@@
+</$list>

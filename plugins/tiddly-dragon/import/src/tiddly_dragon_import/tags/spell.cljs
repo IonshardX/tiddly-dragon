@@ -1,5 +1,5 @@
-(ns tiddly-dragon.tags.spell
-  (:require [tiddly-dragon.tiddler :as tiddler]
+(ns tiddly-dragon-import.tags.spell
+  (:require [tiddly-dragon-import.tiddler :as tiddler]
             [clojure.string :as st]))
 
 (def school-map {"A" "Abjuration"

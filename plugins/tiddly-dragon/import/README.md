@@ -14,7 +14,7 @@ Using Tiddlywiki is a great way to manage a D&D campaign, this tool is to allow 
 4. Visit your Tiddly Wiki and drag and drop that JSON file into it and import the tiddlers.
 
 [appfiles]: (https://github.com/ceryliae/DnDAppFiles)
-[tool]: (https://kasuko.github.io/tiddly-dragon/)
+[tool]: (https://ionshard.github.io/tiddly-dragon/)
 
 ## Setup
 

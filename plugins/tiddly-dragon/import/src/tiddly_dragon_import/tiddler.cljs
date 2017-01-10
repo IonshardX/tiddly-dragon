@@ -1,4 +1,4 @@
-(ns tiddly-dragon.tiddler
+(ns tiddly-dragon-import.tiddler
   (:require [clojure.string :as st]))
 
 (defn title-case

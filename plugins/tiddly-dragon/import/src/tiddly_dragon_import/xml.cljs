@@ -1,6 +1,5 @@
-(ns tiddly-dragon.xml
-  (:require [tiddly-dragon.xml-sample :as sample]
-            [tubax.core :refer [xml->clj]]
+(ns tiddly-dragon-import.xml
+  (:require [tubax.core :refer [xml->clj]]
             [tubax.helpers :as th]
             [clojure.string :as st]))
 

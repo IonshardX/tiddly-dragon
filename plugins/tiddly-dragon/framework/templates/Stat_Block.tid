@@ -1,0 +1,41 @@
+title: $:/plugins/ionshard/tiddly-dragon/templates/Stat Block
+type: text/vnd.tiddlywiki
+
+@@.stat-block
+<table>
+<tr>
+<th>Str</th>
+<th>Dex</th>
+<th>Con</th>
+<th>Int</th>
+<th>Wis</th>
+<th>Cha</th>
+</tr>
+<tr>
+<td>
+{{!!str}}
+(<$view tiddler="$:/plugins/ionshard/tiddly-dragon/data/Ability Modifier" index={{!!str}} />)
+</td>
+<td>
+{{!!dex}}
+(<$view tiddler="$:/plugins/ionshard/tiddly-dragon/data/Ability Modifier" index={{!!dex}} />)
+</td>
+<td>
+{{!!con}}
+(<$view tiddler="$:/plugins/ionshard/tiddly-dragon/data/Ability Modifier" index={{!!con}} />)
+</td>
+<td>
+{{!!int}}
+(<$view tiddler="$:/plugins/ionshard/tiddly-dragon/data/Ability Modifier" index={{!!int}} />)
+</td>
+<td>
+{{!!wis}}
+(<$view tiddler="$:/plugins/ionshard/tiddly-dragon/data/Ability Modifier" index={{!!wis}} />)
+</td>
+<td>
+{{!!cha}}
+(<$view tiddler="$:/plugins/ionshard/tiddly-dragon/data/Ability Modifier" index={{!!cha}} />)
+</td>
+</tr>
+</table>
+@@
