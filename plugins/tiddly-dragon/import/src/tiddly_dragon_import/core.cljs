@@ -24,6 +24,13 @@
     (set! (.-download lnk) filename)
     (.click lnk)))
 
+(defn convert-xml
+  [xml]
+  (->> xml
+       xml/parse
+       (map tiddler/->tiddler)
+       clj->js))
+
 (defn convert-file
   [filename e]
   (->> e
@@ -32,13 +39,6 @@
        convert-xml
        js->json
        (save-file (str filename ".json"))))
-
-(defn convert-xml
-  [xml]
-  (->> xml
-       xml/parse
-       (map tiddler/->tiddler)
-       clj->js))
 
 
 (defn import-file
