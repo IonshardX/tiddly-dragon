@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/ionshard/tiddly-dragon/dice-roller.js
+title: $:/plugins/ionshard/tiddly-dragon/library/dice-roller.js
 type: application/javascript
 module-type: library
 \*/

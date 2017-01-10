@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/ionshard/tiddly-dragon/action-rolldice.js
+title: $:/plugins/ionshard/tiddly-dragon/widgets/action-rolldice.js
 type: application/javascript
 module-type: widget
 
@@ -12,7 +12,7 @@ Action widget to set a single field or index on a tiddler to the result of a dic
     /*global $tw: false */
     "use strict";
 
-    var lib = require("$:/plugins/ionshard/tiddly-dragon/dice-roller.js");
+    var lib = require("$:/plugins/ionshard/tiddly-dragon/library/dice-roller.js");
 
     var Widget = require("$:/core/modules/widgets/widget.js").widget;
 

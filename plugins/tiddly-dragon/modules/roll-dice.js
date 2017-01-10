@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/ionshard/tiddly-dragon/roll-dice.js
+title: $:/plugins/ionshard/tiddly-dragon/macros/roll-dice.js
 type: application/javascript
 module-type: macro
 
@@ -14,6 +14,8 @@ See: https://en.wikipedia.org/wiki/Dice_notation
     /*global $tw: false */
     "use strict";
 
+    var lib = require("$:/plugins/ionshard/tiddly-dragon/library/dice-roller.js");
+
     exports.name = "roll-dice";
 
     exports.params = [
@@ -21,7 +23,6 @@ See: https://en.wikipedia.org/wiki/Dice_notation
     ];
 
     exports.run = function(notation) {
-        var lib = require("$:/plugins/ionshard/tiddly-dragon/dice-roller.js");
         var roll = new lib.DiceRoll(notation);
         return roll.toString();
     };

@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/ionshard/tiddly-dragon/import.js
+title: $:/plugins/ionshard/tiddly-dragon/library/import.js
 type: application/javascript
 module-type: library
 \*/

@@ -1,7 +1,9 @@
-created: 20170110023630275
-modified: 20170110023801347
 tags: 
 title: HelloThere
 type: text/vnd.tiddlywiki
 
-Welcome to the beginnings of the Tiddly Dragon plugin development. To test try importing XML files from <a href="https://github.com/ceryliae/DnDAppFiles">here.</a>
+Welcome to the beginnings of the Tiddly Dragon plugin development. 
+
+!! Check Out
+* [[D&D Import]]
+* [[Dice Rolling]]

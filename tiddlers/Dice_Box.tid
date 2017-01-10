@@ -1,0 +1,20 @@
+tags: Example
+title: Dice Box
+type: text/vnd.tiddlywiki
+
+<<dice-button d2>>
+
+<<dice-button d4>>
+
+<<dice-button d6>>
+
+<<dice-button d8>>
+
+<<dice-button d10>>
+
+<<dice-button d12>>
+
+<<dice-button d20>>
+
+<<dice-button d100>>
+

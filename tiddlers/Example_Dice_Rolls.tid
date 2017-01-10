@@ -1,0 +1,24 @@
+tags: Example
+title: Example Dice Rolls
+type: text/vnd.tiddlywiki
+
+!! d20
+<<roll-dice d20>>
+
+!!! Advantage
+<<roll-dice 2d20-L>>
+
+!!! Disadvantage
+<<roll-dice 2d20-H>>
+
+!! d6
+<<roll-dice d6>>
+
+!! Sample Character: 4d6, drop lowest, in order.
+<pre>Str: <<roll-dice 4d6-L>>
+Dex: <<roll-dice 4d6-L>>
+Con: <<roll-dice 4d6-L>>
+Int: <<roll-dice 4d6-L>>
+Wis: <<roll-dice 4d6-L>>
+Cha: <<roll-dice 4d6-L>>
+</pre>

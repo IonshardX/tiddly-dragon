@@ -1,0 +1,12 @@
+tags: Example
+title: Dice Buttons
+type: text/vnd.tiddlywiki
+
+!! d20
+<<dice-button>>
+
+!! 3d6
+<<dice-button 3d6>>
+
+!! 10d100
+<<dice-button 10d100>>
