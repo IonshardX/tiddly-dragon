@@ -1,0 +1,11 @@
+title: $:/macros/dice-button
+type: text/vnd.tiddlywiki
+tags: $:/tags/Macro
+
+\define dice-button(notation:"d20")
+<$button>
+<$action-rolldice $tiddler="$:/temp/tiddly-dragon/$notation$/$(currentTiddler)$" $field="text" $notation="$notation$" />
+$notation$
+</$button>
+<<dice-result "$:/temp/tiddly-dragon/$notation$/$(currentTiddler)$">>
+\end

@@ -1,0 +1,6 @@
+/*\
+title: $:/plugins/ionshard/tiddly-dragon/dice-roller.js
+type: application/javascript
+module-type: library
+\*/
+

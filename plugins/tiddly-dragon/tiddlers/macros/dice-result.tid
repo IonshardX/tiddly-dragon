@@ -1,0 +1,14 @@
+title: $:/macros/dice-result
+type: text/vnd.tiddlywiki
+tags: $:/tags/Macro
+
+\define dice-result(tiddler)
+<$reveal type="nomatch" state="$tiddler$" text="">
+@@background-color:#f5f5f5;border-width:1px;border-style:solid;border-color:#cccccc;padding-top:0;padding-left:3px;padding-right:3px;padding-bottom:2px;border-radius:3px;font-family:Monaco,Consolas,monospace;
+{{$tiddler$}}
+<$button set="$tiddler$" setTo="" class=<<tv-config-toolbar-class>>>
+{{$:/core/images/close-button}}
+</$button>
+@@
+</$reveal>
+\end

@@ -1,0 +1,12 @@
+title: $:/macros/dice-form
+type: text/vnd.tiddlywiki
+tags: $:/tags/Macro
+
+\define dice-form()
+<$edit-text tiddler="$:/temp/tiddly-dragon/DiceForm/$(currentTiddler)$/Input" tag="input" />
+<$button>
+<$action-rolldice $tiddler="$:/temp/tiddly-dragon/DiceForm/$(currentTiddler)$/Output" $field="text" $notation={{$:/temp/tiddly-dragon/DiceForm/$(currentTiddler)$/Input}} />
+Roll Dice
+</$button>
+<<dice-result "$:/temp/tiddly-dragon/DiceForm/$(currentTiddler)$/Output">>
+\end

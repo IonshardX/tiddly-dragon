@@ -1,0 +1,3 @@
+[submodule "plugins/tiddly-dragon/rpg-dice-roller"]
+	path = plugins/tiddly-dragon/rpg-dice-roller
+	url = git@github.com:GreenImp/rpg-dice-roller.git

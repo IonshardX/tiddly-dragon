@@ -1,2 +1,4 @@
 output
 .DS_Store
+plugins/tiddly-dragon/modules/import.js
+plugins/tiddly-dragon/modules/dice-roller.js
