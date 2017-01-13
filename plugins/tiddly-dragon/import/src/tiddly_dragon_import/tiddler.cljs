@@ -5,7 +5,9 @@
 
 (defn title-case
   [s]
-  (st/join " " (map st/capitalize (st/split s #"[ -_]"))))
+  (->> (st/split s #"[ _]")
+       (map st/capitalize)
+       (st/join " ")))
 
 (defmulti prepare :tag)
 

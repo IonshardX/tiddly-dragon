@@ -16,15 +16,18 @@
                "S" "Small"
                "T" "Tiny"})
 
+(defn extract-parts
+  [s]
+  (->> (st/split s #"[\(\),]")
+       (map st/trim)
+       (remove empty?)))
+
 (defn extract-type
   [t]
-  (map tiddler/title-case (st/split t #", ")))
-
-(defn extract-hd
-  [hp]
-  (->> hp
-       (re-find #"(\d*) \((.*)\)")
-       rest))
+  (let [[type subtype source] (map tiddler/title-case (extract-parts t))]
+    (if source
+      [type subtype source]
+      [type nil subtype])))
 
 (defn sub-tag->text
   [sub-tag]
@@ -42,10 +45,11 @@
 
 (defmethod tiddler/prepare :monster
   [entity]
-  (let [[type source] (-> entity :type extract-type)
-        [hp hd] (-> entity :hp extract-hd)]
+  (let [[type subtype source] (-> entity :type extract-type)
+        [hp hd] (-> entity :hp extract-parts)]
     (assoc entity
            :_type type
+           :subtype subtype
            :source source
            :size (get size-map (:size entity))
            :hp hp
@@ -61,4 +65,7 @@
   [entity]
   [(tiddler/base-tag entity)
    (:_type entity)
+   (:subtype entity)
+   (:source entity)
    (str "CR " (:cr entity))])
+
