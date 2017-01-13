@@ -4,6 +4,7 @@ scripts/build.sh
 tiddlywiki --build index
 git checkout tiddlers/\$__StoryList.tid
 git checkout gh-pages
+git pull
 cp output/index.html .
 git add .
 git commit
