@@ -20,6 +20,12 @@
   [t]
   (map tiddler/title-case (st/split t #", ")))
 
+(defn extract-hd
+  [hp]
+  (->> hp
+       (re-find #"(\d*) \((.*)\)")
+       rest))
+
 (defn sub-tag->text
   [sub-tag]
   (str "!!! " (:name sub-tag) "\n"
@@ -36,11 +42,14 @@
 
 (defmethod tiddler/prepare :monster
   [entity]
-  (let [[type source] (-> entity :type extract-type)]
+  (let [[type source] (-> entity :type extract-type)
+        [hp hd] (-> entity :hp extract-hd)]
     (assoc entity
            :_type type
            :source source
-           :size (get size-map (:size entity)))))
+           :size (get size-map (:size entity))
+           :hp hp
+           :hd hd)))
 
 (defmethod tiddler/->text :monster
   [entity]
