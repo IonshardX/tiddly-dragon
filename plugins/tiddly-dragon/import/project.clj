@@ -1,6 +1,6 @@
 (defproject tiddly-dragon-import "0.1.0-SNAPSHOT"
-  :description "Tiddly Dragon is a simple webapp for converting DnDAppFiles XML into importable TiddlyWiki JSON files"
-  :url "https://ionshard.github.io/tiddly-dragon/"
+  :description "Tiddly Dragon Import is a simple webapp for converting DnDAppFiles XML into importable TiddlyWiki JSON files"
+  :url "http://ionshard.com/tiddly-dragon/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
