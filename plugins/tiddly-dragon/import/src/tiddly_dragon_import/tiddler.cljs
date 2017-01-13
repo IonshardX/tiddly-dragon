@@ -1,6 +1,8 @@
 (ns tiddly-dragon-import.tiddler
   (:require [clojure.string :as st]))
 
+(def global-tag "[[TiddlyDragon]] ")
+
 (defn title-case
   [s]
   (st/join " " (map st/capitalize (st/split s #"[ -_]"))))
@@ -60,6 +62,6 @@
   (let [entity (prepare xml)]
     (assoc entity
            :title (->title entity)
-           :tags (stringify-tabs (->tags entity))
+           :tags (->> entity ->tags stringify-tabs (str global-tag))
            :text (->text entity)
            :type "text/vnd.tiddlywiki")))
