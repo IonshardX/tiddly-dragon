@@ -18,9 +18,15 @@
                "WD" "Wand"
                "$" "Currency"})
 
+(def dmgtype-map {"B" "Bludgeoning"
+                  "P" "Piercing"
+                  "S" "Slashing"})
+
 (defmethod tiddler/prepare :item
   [entity]
-  (assoc entity :_type (get type-map (:type entity))))
+  (assoc entity :_type (get type-map (:type entity))
+                :_modifier (:modifier entity)
+                :dmgType (get dmgtype-map (:dmgType entity))))
 
 (defmethod tiddler/->tags :item
   [entity]

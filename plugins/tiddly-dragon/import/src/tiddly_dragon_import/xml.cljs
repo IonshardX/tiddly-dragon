@@ -92,6 +92,6 @@
                   :action [:name [:text join-text] :attack]
                   :reaction [:name [:text join-text] :attack]
                   :legendary [:name [:text join-text] :attack]
-                  :item [:name [:text join-text] [:modifier join-text] :ac :property :type
+                  :item [:name [:text join-text] [:modifier join-text] :ac :property :type :value
                          :dmg2 :dmg1 :strength :weight :roll :dmgType :rarity :stealth :range]})
 

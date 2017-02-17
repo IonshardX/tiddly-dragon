@@ -66,4 +66,5 @@
            :title (->title entity)
            :tags (->> entity ->tags stringify-tabs (str global-tag))
            :text (->text entity)
-           :type "text/vnd.tiddlywiki")))
+           :type "text/vnd.tiddlywiki"
+           :modifier "")))

@@ -3,7 +3,8 @@ modified: 20170217021824047
 tags: $:/tags/ViewTemplate
 title: $:/plugins/ionshard/tiddly-dragon/templates/ItemView
 type: text/vnd.tiddlywiki
+list-before: $:/core/ui/ViewTemplate/body
 
-<$list filter="[is[current]tag[Monster]]">
+<$list filter="[is[current]tag[Item]]">
 {{||$:/plugins/ionshard/tiddly-dragon/templates/Item}}
 </$list>
