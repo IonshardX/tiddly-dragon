@@ -1,0 +1,10 @@
+created: 20170217021641500
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20170217021806446
+tags: $:/tags/ViewTemplate
+title: $:/plugins/ionshard/tiddly-dragon/templates/SpellView
+type: text/vnd.tiddlywiki
+
+<$list filter="[is[current]tag[Spell]]">
+{{||$:/plugins/ionshard/tiddly-dragon/templates/Spell}}
+</$list>

@@ -1,9 +1,8 @@
+created: 20170217021844525
+modified: 20170217021848314
 title: $:/plugins/ionshard/tiddly-dragon/templates/Spell
 type: text/vnd.tiddlywiki
-tags: $:/tags/ViewTemplate
-list-before: $:/core/ui/ViewTemplate/body
 
-<$list filter="[is[current]tag[Spell]]">
 @@.spell
 <h3>
 <$reveal type="nomatch" state="!!level" text="0">Level {{!!level}}, </$reveal>
@@ -17,4 +16,3 @@ list-before: $:/core/ui/ViewTemplate/body
 <strong>Components:</strong> {{!!components}}<br />
 <strong>Duration:</strong> {{!!duration}}<br />
 @@
-</$list>

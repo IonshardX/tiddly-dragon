@@ -1,0 +1,38 @@
+created: 20170217021019373
+modified: 20170217021946628
+tags: 
+title: $:/plugins/ionshard/tiddly-dragon/templates/Item
+type: text/vnd.tiddlywiki
+
+@@.item
+<$reveal type="nomatch" state="!!_type" text="">
+<strong>Type:</strong> {{!!_type}}<br />
+</$reveal>
+<$reveal type="nomatch" state="!!weight" text="">
+<strong>Weight:</strong> {{!!weight}}<br />
+</$reveal>
+<$reveal type="nomatch" state="!!value" text="">
+<strong>Value:</strong> {{!!value}}<br />
+</$reveal>
+<$reveal type="nomatch" state="!!ac" text="">
+<strong>AC:</strong> {{!!ac}}
+</$reveal>
+<$reveal type="nomatch" state="!!strength" text="">
+<strong>Strength Requirement:</strong> {{!!strength}}<br />
+</$reveal>
+<$reveal type="match" state="!!stealth" text="YES">
+(Disadvantage on Stealth)<br />
+</$reveal>
+<$reveal type="nomatch" state="!!dmg1" text="">
+<strong>Damage:</strong> {{!!dmg1}}
+</$reveal>
+<$reveal type="nomatch" state="!!dmg2" text="">
+ ({{!!dmg2}})
+</$reveal>
+<$reveal type="nomatch" state="!!dmgType" text="">
+ {{!!dmgType}}<br />
+</$reveal>
+<$reveal type="nomatch" state="!!range" text="">
+<strong>Range:</strong> {{!!range}}<br />
+</$reveal>
+@@

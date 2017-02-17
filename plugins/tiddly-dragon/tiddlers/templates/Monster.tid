@@ -1,9 +1,8 @@
+created: 20170217021533152
+modified: 20170217021909897
 title: $:/plugins/ionshard/tiddly-dragon/templates/Monster
 type: text/vnd.tiddlywiki
-tags: $:/tags/ViewTemplate
-list-before: $:/core/ui/ViewTemplate/body
 
-<$list filter="[is[current]tag[Monster]]">
 @@.monster
 <h3>{{!!size}} {{!!_type}}<$reveal type="nomatch" state="!!subtype" text=""> ({{!!subtype}})</$reveal>, {{!!alignment}}
 <span style="float:right;">
@@ -57,4 +56,3 @@ list-before: $:/core/ui/ViewTemplate/body
 </$reveal>
 </dl>
 @@
-</$list>

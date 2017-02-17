@@ -1,0 +1,9 @@
+created: 20170217021141721
+modified: 20170217021824047
+tags: $:/tags/ViewTemplate
+title: $:/plugins/ionshard/tiddly-dragon/templates/ItemView
+type: text/vnd.tiddlywiki
+
+<$list filter="[is[current]tag[Monster]]">
+{{||$:/plugins/ionshard/tiddly-dragon/templates/Item}}
+</$list>
