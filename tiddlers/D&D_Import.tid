@@ -1,5 +1,36 @@
+created: 20170217025113224
+modified: 20170217030557372
 tags: Example
 title: D&D Import
 type: text/vnd.tiddlywiki
 
-TODO: Add info about Importing Here
+Tiddly Dragon allows you to import the XML files from the <a href="https://github.com/ceryliae/DnDAppFiles">~DnDAppFiles Github Repository</a>
+
+!! How To
+
+Download one of the currently supported files (listed below) from the DnDAppFiles repository and then either drag and drop the XML file to the top of this browser window until you see the green import banner. Or you can select the file using the below import button.
+
+<$set name="tv-config-toolbar-icons" value="yes">
+<$set name="tv-config-toolbar-text" value="yes">
+<$set name="tv-config-toolbar-class" value="">
+<div style="position:relative;">
+{{$:/core/ui/Buttons/import}}
+</div>
+</$set>
+</$set>
+</$set>
+
+!! Currently Supported Formats
+
+!!! Monster
+
+Try the <a href="https://github.com/ceryliae/DnDAppFiles/raw/master/Bestiary/Monster%20Manual%20Bestiary.xml">Monster Manual Bestiary.xml</a>
+
+!!! Spells
+
+Try the <a href="https://github.com/ceryliae/DnDAppFiles/blob/master/Spells/PHB%20Spells.xml">PHB Spell.xml</a>
+
+!!! Items
+
+* <a href="https://github.com/ceryliae/DnDAppFiles/raw/master/Items/Magic%20Items.xml">Magic Items.xml</a>
+* <a href="https://github.com/ceryliae/DnDAppFiles/raw/master/Items/Mundane%20Items.xml">Mundane Items.xml</a>

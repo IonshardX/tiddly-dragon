@@ -1,3 +1,5 @@
+created: 20170217030618768
+modified: 20170217030754514
 tags: Example
 title: Dice Rolling
 type: text/vnd.tiddlywiki
@@ -5,13 +7,16 @@ type: text/vnd.tiddlywiki
 Attempting to implement RPG Style Dice Rolling into Tiddly Wiki using <a href="https://github.com/GreenImp/rpg-dice-roller">~GreenImp's RPG Dice Rolling Library</a>
 
 !! [[Dice Box]]
+
+Wikitext: `{{Dice Box}}`
+
 {{Dice Box}}
 
 !! [[Dice Form]]
+
+Wikitext: `{{Dice Form}}`
+
 {{Dice Form}}
 
 !! [[Dice Buttons]]
 {{Dice Buttons}}
-
-!! [[Example Dice Rolls]]
-{{Example Dice Rolls}}

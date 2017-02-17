@@ -1,12 +1,23 @@
+created: 20170217030806265
+modified: 20170217030921307
 tags: Example
 title: Dice Buttons
 type: text/vnd.tiddlywiki
 
 !! d20
+
+Wikitext: `<<dice-button>>`
+
 <<dice-button>>
 
 !! 3d6
+
+Wikitext: `<<dice-button 3d6>>`
+
 <<dice-button 3d6>>
 
-!! 10d100
-<<dice-button 10d100>>
+!! 2d14+9
+
+Wikitext: `<<dice-button 2d14+9>>`
+
+<<dice-button 2d14+9>>
